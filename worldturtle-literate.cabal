@@ -1,0 +1,22 @@
+cabal-version:       3.0
+name:                worldturtle-literate
+version:             0.1.0.0
+homepage:            https://github.com/aneilmac/worldturtle-literate#readme
+license:             BSD-3-Clause
+author:              Archibald Neil MacDonald
+maintainer:          anmacdonald@gmail.com
+copyright:           2021 Archibald Neil MacDonald
+build-type:          Simple
+
+executable worldturtle-literate
+  hs-source-dirs:      .
+  main-is:             Main.lhs
+  default-language:    Haskell2010
+  other-modules: CircleList
+               , CircleListDraw
+  ghc-options: -pgmL markdown-unlit
+  build-tool-depends: markdown-unlit:markdown-unlit
+  build-depends: base >= 4.13 && < 5
+               , markdown-unlit
+               , gloss
+               , worldturtle >= 0.2 && < 0.3
